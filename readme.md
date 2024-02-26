@@ -23,4 +23,7 @@
 # **Working with the file**
 
 1. **Building the webserver to serve the request**
+    * First step is to initialize the server, so that we can accept and server the request.
+
+2. **Routing**
 
