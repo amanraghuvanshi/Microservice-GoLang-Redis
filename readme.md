@@ -14,3 +14,13 @@
 
 # **Configuration Files**
 
+**Run go mod tidy and get all the dependencies**
+
+<hr>
+
+<hr>
+
+# **Working with the file**
+
+1. **Building the webserver to serve the request**
+
