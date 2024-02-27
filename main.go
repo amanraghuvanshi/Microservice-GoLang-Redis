@@ -1,30 +1,18 @@
 package main
 
 import (
-	"log"
-	"net/http"
+	"context"
+	"fmt"
 
-	"github.com/go-chi/chi/v5"
-	"github.com/go-chi/chi/v5/middleware"
+	"github.com/amanraghuvanshi/microservice-golang-redis/app"
 )
 
 func main() {
-	router := chi.NewRouter()
-	router.Use(middleware.Logger)
+	application := app.New()
 
-	router.Get("/hello", basicHandler)
-	// Initializing the server
-	server := &http.Server{
-		Addr:    ":3000",
-		Handler: router,
-	}
+	err := application.Start(context.TODO())
 
-	err := server.ListenAndServe()
 	if err != nil {
-		log.Fatalln("Failed to start the server", err)
+		fmt.Println("Failed to start the application")
 	}
-}
-
-func basicHandler(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Hello World!!\nRouter Instantiated!!"))
 }
