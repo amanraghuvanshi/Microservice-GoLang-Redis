@@ -34,7 +34,7 @@ func (a *App) Start(ctx context.Context) error {
 
 	err := a.rdb.Ping().Err()
 	if err != nil {
-		return fmt.Errorf("Redis Connection Failed, %w", err)
+		return fmt.Errorf("redis connection failed, %w", err)
 	}
 
 	fmt.Println("Starting the server!!")
