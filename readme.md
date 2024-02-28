@@ -27,3 +27,11 @@
 
 2. **Routing**
 
+    * **Currently we are only working with the basic operations like updations and all, later on depending on the need we will be adding more funtionality on the top**
+
+3. **Redis**
+
+    * **In this project we going to utlize the `Redis` Database as our datastore, which is basically a in-memory datastore and because of that Redis is quite fast**
+
+    
+
